@@ -1,0 +1,107 @@
+% TeX compilation engine: XeLaTeX
+\documentclass[a4paper,14pt]{extarticle}
+
+% Поля
+\usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+
+% Шрифты
+\usepackage[russian]{babel}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+% Типографика
+\usepackage{microtype}
+\tolerance=1000
+\sloppy
+
+% Интервал
+\usepackage{setspace}
+\onehalfspacing
+
+% Красная строка
+\setlength{\parindent}{1.25cm} % стандартный абзацный отступ
+
+% Цвет текста
+\usepackage{xcolor}
+\color{black}
+
+% Создание оглавления
+\usepackage{hyperref}
+
+% Оглавление на отдельной странице
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Оформление источников по ГОСТу
+\usepackage[autostyle=true]{csquotes}
+\usepackage[style=gost-numeric,sortlocale=ru_RU,natbib=true]{biblatex}
+\addbibresource{bibliography.bib}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ\\
+Федеральное государственное автономное образовательное учреждение высшего образования\\
+\textbf{«Национальный исследовательский Нижегородский государственный университет им. Н.И. Лобачевского» (ННГУ)}\\
+\vspace*{\fill}
+{\LARGE Новая концепция интеграла,\\предложенная Лебегом, и ее развитие}\\
+\vspace{2cm}
+\end{center}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\raggedright
+\textbf{Выполнил:}\\
+Власов Максим Сергеевич,\\
+студент группы 3823М1ПМкн\\
+\end{minipage}
+\vspace*{\fill}
+\begin{center}
+Нижний Новгород\\
+2024
+\end{center}
+\end{titlepage}
+
+\newpage
+\setcounter{page}{2}
+\tableofcontents
+
+\newpage
+\section*{Введение}
+\addcontentsline{toc}{section}{Введение}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sapien nisi, vel elementum odio porta lobortis. Etiam tincidunt risus arcu, ut sagittis tellus scelerisque dictum. In hac habitasse platea dictumst. Nulla vitae efficitur velit. Suspendisse nunc erat, mattis id maximus vel, hendrerit ac sem. Integer eget ullamcorper augue.
+
+Cras quam leo, laoreet nec lectus nec, pellentesque tincidunt sapien. Cras consequat tortor quis nibh iaculis accumsan. Ut hendrerit, sem condimentum volutpat facilisis, turpis lacus euismod risus, ut consectetur dolor turpis a ligula. Nullam aliquet aliquet ante. Pellentesque vestibulum dapibus ante vel ultricies.
+
+\newpage
+\section{Первый раздел основной части}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sapien nisi, vel elementum odio porta lobortis. Etiam tincidunt risus arcu, ut sagittis tellus scelerisque dictum. In hac habitasse platea dictumst. Nulla vitae efficitur velit. Suspendisse nunc erat, mattis id maximus vel, hendrerit ac sem. Integer eget ullamcorper augue.
+
+Cras quam leo, laoreet nec lectus nec, pellentesque tincidunt sapien. Cras consequat tortor quis nibh iaculis accumsan. Ut hendrerit, sem condimentum volutpat facilisis, turpis lacus euismod risus, ut consectetur dolor turpis a ligula. Nullam aliquet aliquet ante. Pellentesque vestibulum dapibus ante vel ultricies. ~\cite{example1}
+
+Donec facilisis mi aliquam ligula hendrerit sollicitudin. Mauris et neque luctus, tincidunt odio facilisis, congue leo. Aenean a ullamcorper lorem. Morbi sodales a eros non tempor. Phasellus vulputate, libero a aliquet maximus, erat risus blandit sem, efficitur eleifend felis ipsum sit amet nunc. Morbi luctus vitae neque vitae hendrerit. Donec consectetur suscipit tortor et congue. Fusce tempus ultricies turpis in mattis. Cras ac diam in leo fringilla varius non sit amet metus.
+
+\newpage
+\section{Второй раздел основной части}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sapien nisi, vel elementum odio porta lobortis. Etiam tincidunt risus arcu, ut sagittis tellus scelerisque dictum. In hac habitasse platea dictumst. Nulla vitae efficitur velit. Suspendisse nunc erat, mattis id maximus vel, hendrerit ac sem. Integer eget ullamcorper augue. ~\cite{example2}
+
+Cras quam leo, laoreet nec lectus nec, pellentesque tincidunt sapien. Cras consequat tortor quis nibh iaculis accumsan. Ut hendrerit, sem condimentum volutpat facilisis, turpis lacus euismod risus, ut consectetur dolor turpis a ligula. Nullam aliquet aliquet ante. Pellentesque vestibulum dapibus ante vel ultricies.
+
+Donec facilisis mi aliquam ligula hendrerit sollicitudin. Mauris et neque luctus, tincidunt odio facilisis, congue leo. Aenean a ullamcorper lorem. Morbi sodales a eros non tempor. Phasellus vulputate, libero a aliquet maximus, erat risus blandit sem, efficitur eleifend felis ipsum sit amet nunc. Morbi luctus vitae neque vitae hendrerit. Donec consectetur suscipit tortor et congue. Fusce tempus ultricies turpis in mattis. Cras ac diam in leo fringilla varius non sit amet metus. ~\cite{example3}
+
+\newpage
+\section*{Заключение}
+\addcontentsline{toc}{section}{Заключение}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sapien nisi, vel elementum odio porta lobortis. Etiam tincidunt risus arcu, ut sagittis tellus scelerisque dictum. In hac habitasse platea dictumst. Nulla vitae efficitur velit. Suspendisse nunc erat, mattis id maximus vel, hendrerit ac sem. Integer eget ullamcorper augue.
+
+Cras quam leo, laoreet nec lectus nec, pellentesque tincidunt sapien. Cras consequat tortor quis nibh iaculis accumsan. Ut hendrerit, sem condimentum volutpat facilisis, turpis lacus euismod risus, ut consectetur dolor turpis a ligula. Nullam aliquet aliquet ante. Pellentesque vestibulum dapibus ante vel ultricies.
+
+\newpage
+\addcontentsline{toc}{section}{Список литературы}
+\printbibliography
+
+\end{document}
